@@ -44,7 +44,7 @@ body::before {
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.4;
     z-index: -1;
 }
 
