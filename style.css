@@ -44,7 +44,7 @@ body::before {
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.1;
+    opacity: 0.3;
     z-index: -1;
 }
 
@@ -269,9 +269,5 @@ footer a:hover {
 .page-project4 header a,
 .page-project7 header a {
     color: var(--accent2);
-}
-.page-project3::before,
-.page-project4::before,
-.page-project7::before {
-    opacity: 0.3;
-}
+
+
