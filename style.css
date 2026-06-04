@@ -189,3 +189,51 @@ footer a:hover {
         font-size: 1.9rem;
     }
 }
+
+/* ---- Project Cards ---- */
+#projects ol {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+#projects ol li {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(201, 118, 138, 0.2);
+    border-radius: 16px;
+    padding: 1.4rem 1.6rem;
+    flex: 1 1 220px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+#projects ol li:hover {
+    box-shadow: 0 6px 20px rgba(201, 118, 138, 0.18);
+    transform: translateY(-3px);
+}
+
+#projects ol li h3 {
+    font-size: 0.95rem;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+#projects ol li h3 a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#projects ol li h3 a:hover {
+    text-decoration: underline;
+}
+
+#projects ol li p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 0;
+}
