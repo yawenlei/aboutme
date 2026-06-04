@@ -247,31 +247,21 @@ footer a:hover {
 .page-project7::before { background-image: url('bg-project7.jpg'); }
 
 .page-project3 section h2,
-.page-project4 section h2,
-.page-project7 section h2 {
     color: var(--accent2);
 }
 
 .page-project3 header,
-.page-project4 header,
-.page-project7 header {
     border-bottom: 2px solid var(--accent2);
 }
 
 .page-project3 section a,
-.page-project4 section a,
-.page-project7 section a {
     color: var(--accent2);
 }
 
 .page-project3,
-.page-project4,
-.page-project7 {
     background-color: #f0f5fa;
 }
 .page-project3 header a,
-.page-project4 header a,
-.page-project7 header a {
     color: var(--accent2);
 
 /* Project 4 - Green */
