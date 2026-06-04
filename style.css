@@ -237,3 +237,7 @@ footer a:hover {
     color: var(--muted);
     margin-bottom: 0;
 }
+
+.page-project3::before { background-image: url('bg-project3.jpg'); }
+.page-project4::before { background-image: url('bg-project4.jpg'); }
+.page-project7::before { background-image: url('bg-project7.jpg'); }
