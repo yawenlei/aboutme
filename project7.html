@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 7 – Student Habits Analysis | Yawen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">← Back to About Me</a>
+    </nav>
+    <h1>Project 7: Student Habits vs. Academic Performance</h1>
+    <p class="subtitle">CS110 · Spring 2026 · Yawen Lei</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        This project uses Python and pandas to analyze the relationship between student
+        lifestyle habits and academic performance. The dataset contains information on
+        1,000 students across 16 variables including study hours, sleep, social media
+        usage, diet quality, exercise frequency, and exam scores.
+      </p>
+    </section>
+
+    <section>
+      <h2>What It Does</h2>
+      <ul>
+        <li>Loads a real dataset from Kaggle using <code>kagglehub</code></li>
+        <li>Explores the dataset structure: column types, missing values, basic statistics</li>
+        <li>Filters and compares student groups based on study habits</li>
+        <li>Uses vectorized pandas operations to calculate counts, percentages, and group averages</li>
+        <li>Draws conclusions about what habits correlate with higher exam scores</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Concepts</h2>
+      <ul>
+        <li><strong>pandas DataFrames:</strong> Loading, inspecting, and slicing tabular data with <code>.head()</code>, column selection, and boolean filtering</li>
+        <li><strong>Vectorization:</strong> Applying operations to entire columns at once rather than looping row by row — for example, <code>(df['study_hours_per_day'] &gt; 6).sum()</code></li>
+        <li><strong>Boolean indexing:</strong> Filtering rows that meet a condition and computing statistics on those subsets</li>
+        <li><strong>Group comparison:</strong> Splitting students into groups and comparing their average exam scores to find meaningful patterns</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Findings</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Students studying more than 6 hours/day</td>
+            <td>40 students (4.4%)</td>
+          </tr>
+          <tr>
+            <td>Students studying less than 2 hours/day</td>
+            <td>13.5%</td>
+          </tr>
+          <tr>
+            <td>Average exam score (study &gt; 5 hrs/day)</td>
+            <td>91.1</td>
+          </tr>
+          <tr>
+            <td>Average exam score (study ≤ 5 hrs/day)</td>
+            <td>65.7</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Students who studied more than 5 hours per day scored on average 25 points higher
+        than those who studied less — a substantial gap that suggests study time is one of
+        the strongest predictors of exam performance in this dataset.
+      </p>
+    </section>
+
+    <section>
+      <h2>Code Highlight</h2>
+      <pre><code># Compare average exam scores between high and low study-hour groups
+more_than_5 = df[df['study_hours_per_day'] > 5]['exam_score'].mean()
+less_than_5  = df[df['study_hours_per_day'] <= 5]['exam_score'].mean()
+
+print("Average exam score (study > 5 hrs):", more_than_5)   # 91.1
+print("Average exam score (study ≤ 5 hrs):", less_than_5)   # 65.7</code></pre>
+    </section>
+
+    <section>
+      <h2>What I Learned</h2>
+      <p>
+        This project showed me how much you can learn from a dataset with just a few
+        pandas operations. Vectorization makes filtering and aggregating data fast and
+        readable — no loops needed. I also learned to think carefully about how to frame
+        comparisons: splitting students into two groups and computing the mean for each
+        is a simple but powerful way to test whether a variable actually matters.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Yawen · CS110 Project 7 · University of Oregon</p>
+    <p><a href="index.html">Back to About Me</a></p>
+  </footer>
+
+</body>
+</html>

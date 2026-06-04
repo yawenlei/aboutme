@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 4 – NLP Text Analysis | Yawen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">← Back to About Me</a>
+    </nav>
+    <h1>Project 4: NLP Text Analysis</h1>
+    <p class="subtitle">CS110 · Spring 2026 · Yawen Lei</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Overview</h2>
+      <p>
+        This project uses Python and spaCy to analyze word frequency patterns in
+        Jane Austen's <em>Pride and Prejudice</em>, fetched from Project Gutenberg.
+        The goal was to compare a basic word count approach against a linguistically
+        cleaned version to see which reveals more meaningful information about the text.
+      </p>
+    </section>
+
+    <section>
+      <h2>What It Does</h2>
+      <ul>
+        <li>Fetches the full text of <em>Pride and Prejudice</em> from an online source and caches it locally</li>
+        <li>Counts raw word frequency using a basic tokenization approach</li>
+        <li>Processes the same text with spaCy: removes stop words and punctuation, applies lemmatization</li>
+        <li>Compares the top 15 words from each approach side by side</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Concepts</h2>
+      <ul>
+        <li><strong>NLP (Natural Language Processing):</strong> Using spaCy to linguistically process text rather than treating it as raw strings</li>
+        <li><strong>Lemmatization:</strong> Reducing words to their base form so "said," "saying," and "says" all count as "say"</li>
+        <li><strong>Stop word removal:</strong> Filtering out common filler words like "the," "and," and "of" that appear frequently but carry little meaning</li>
+        <li><strong>Word frequency analysis:</strong> Counting how often each meaningful word appears to surface themes and characters</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>
+        The difference between the two approaches was striking. The basic count surfaced
+        only grammatical filler — "the," "to," "of," "and" — at the top. After cleaning
+        with spaCy, the top 15 words became almost entirely character names and meaningful verbs:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Word</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>elizabeth</td><td>639</td></tr>
+          <tr><td>darcy</td><td>428</td></tr>
+          <tr><td>say</td><td>426</td></tr>
+          <tr><td>know</td><td>394</td></tr>
+          <tr><td>mrs</td><td>354</td></tr>
+          <tr><td>bennet</td><td>348</td></tr>
+          <tr><td>think</td><td>346</td></tr>
+          <tr><td>miss</td><td>319</td></tr>
+          <tr><td>bingley</td><td>315</td></tr>
+          <tr><td>jane</td><td>303</td></tr>
+          <tr><td>sister</td><td>292</td></tr>
+          <tr><td>lady</td><td>280</td></tr>
+          <tr><td>come</td><td>268</td></tr>
+          <tr><td>good</td><td>248</td></tr>
+          <tr><td>see</td><td>245</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>What I Learned</h2>
+      <p>
+        Raw word counts are misleading — they are dominated by grammatical structure rather
+        than content. Once stop words are removed and words are lemmatized, the results
+        immediately tell a story: the top words are character names, and the most common
+        verbs ("say," "know," "think") reflect how dialogue-heavy and psychologically focused
+        Austen's writing is. NLP tools like spaCy make it possible to surface that layer of
+        meaning quickly and systematically.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Yawen · CS110 Project 4 · University of Oregon</p>
+    <p><a href="index.html">Back to About Me</a></p>
+  </footer>
+
+</body>
+</html>
