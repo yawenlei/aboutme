@@ -241,3 +241,21 @@ footer a:hover {
 .page-project3::before { background-image: url('bg-project3.jpg'); }
 .page-project4::before { background-image: url('bg-project4.jpg'); }
 .page-project7::before { background-image: url('bg-project7.jpg'); }
+
+.page-project3 section h2,
+.page-project4 section h2,
+.page-project7 section h2 {
+    color: var(--accent2);
+}
+
+.page-project3 header,
+.page-project4 header,
+.page-project7 header {
+    border-bottom: 2px solid var(--accent2);
+}
+
+.page-project3 section a,
+.page-project4 section a,
+.page-project7 section a {
+    color: var(--accent2);
+}
