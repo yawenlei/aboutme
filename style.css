@@ -246,27 +246,27 @@ footer a:hover {
 .page-project4::before { background-image: url('bg-project4.jpg'); }
 .page-project7::before { background-image: url('bg-project7.jpg'); }
 
+/* Project 3 - Blue */
+.page-project3 {
+    background-color: #f0f5fa;
+    --cream: #f0f5fa;
+}
 .page-project3 section h2,
+.page-project3 header a,
+.page-project3 footer a {
     color: var(--accent2);
 }
-
-.page-project3 header,
+.page-project3 header {
     border-bottom: 2px solid var(--accent2);
 }
-
-.page-project3 section a,
+.page-project3 section a {
     color: var(--accent2);
 }
-
-.page-project3,
-    background-color: #f0f5fa;
-}
-.page-project3 header a,
-    color: var(--accent2);
 
 /* Project 4 - Green */
 .page-project4 {
-    background-color: #f0f5f0;
+    background-color: #eef5ee;
+    --cream: #eef5ee;
 }
 .page-project4 section h2,
 .page-project4 header a,
@@ -283,6 +283,7 @@ footer a:hover {
 /* Project 7 - Purple */
 .page-project7 {
     background-color: #f5f0f8;
+    --cream: #f5f0f8;
 }
 .page-project7 section h2,
 .page-project7 header a,
@@ -294,4 +295,21 @@ footer a:hover {
 }
 .page-project7 section h3 {
     color: #9a7aba;
+}
+
+/* ---- Skills Bubbles ---- */
+.skills-bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0.6rem 0 1rem;
+}
+
+.skills-bubbles span {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(201, 118, 138, 0.3);
+    border-radius: 20px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.88rem;
+    color: var(--ink);
 }
