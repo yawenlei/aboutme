@@ -270,3 +270,8 @@ footer a:hover {
 .page-project7 header a {
     color: var(--accent2);
 }
+.page-project3::before,
+.page-project4::before,
+.page-project7::before {
+    opacity: 0.3;
+}
